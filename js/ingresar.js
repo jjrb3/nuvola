@@ -1,10 +1,9 @@
 
 const carpetaControlador = 'Parametrizacion';
 
-function verificarIngreso() {
-    
-    var url = 'ingresar/verificar'
-    var data = 'usuario='+$("#usuario").val()+'&clave='+$("#clave").val()
+let verificarIngreso = () => {
+    let url = 'ingresar/verificar'
+    let data = 'usuario='+$("#usuario").val()+'&clave='+$("#clave").val()
 
     _ajax(url,data,'mensaje');
 
@@ -13,5 +12,4 @@ function verificarIngreso() {
             location.assign('si/inicio');
         }
     }, 3000);
-    
 }
